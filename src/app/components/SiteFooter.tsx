@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SocialIcon from "./SocialIcon";
+import BrandMark from "./BrandMark";
 
 const email = "mailto:shehabkhalaf7474@gmail.com";
 
@@ -10,7 +11,7 @@ export default function SiteFooter() {
         <div className="site-footer-main">
           <div className="site-footer-brand">
             <Link className="site-footer-logo" href="/" aria-label="Shehab Khalaf, home">
-              <span className="logo-icon" aria-hidden="true">▮▮▮</span> shehab<span>.</span>khalaf
+              <BrandMark />
             </Link>
             <p>Backend systems for products people use every day.</p>
             <span className="site-footer-location"><i /> BASED IN CAIRO, EGYPT</span>

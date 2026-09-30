@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import BrandMark from "./BrandMark";
 
 type Page = "home" | "work" | "experience" | "expertise" | "about" | "contact";
 
@@ -19,7 +20,7 @@ export default function SiteHeader({ active }: { active: Page }) {
 
   return (
     <header className="header">
-      <Link className="logo" href="/" aria-label="Shehab Khalaf, home"><span className="logo-icon">▮▮▮</span> shehab<span>.</span>khalaf</Link>
+      <Link className="logo" href="/" aria-label="Shehab Khalaf, home"><BrandMark /></Link>
       <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="site-page-nav" onClick={() => setMenuOpen((open) => !open)}><span aria-hidden="true">{menuOpen ? "×" : "☰"}</span><span>Menu</span></button>
       <nav id="site-page-nav" className={`page-nav${menuOpen ? " is-open" : ""}`} aria-label="Main navigation">
         {links.map(({ href, label, page }) => (

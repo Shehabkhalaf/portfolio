@@ -1,0 +1,13 @@
+export default function BrandMark() {
+  return (
+    <svg className="brand-mark" viewBox="0 0 128 128" fill="none" aria-hidden="true" focusable="false">
+      <rect x="5" y="5" width="118" height="118" rx="59" fill="#0D2630" stroke="#3E776F" strokeWidth="2" />
+      <path d="M27 40h29c7 0 11 4 11 10s-4 10-11 10H42c-8 0-13 5-13 12s5 12 13 12h24" stroke="#F1FAF5" strokeWidth="10" strokeLinecap="round" />
+      <path d="M78 39v46m25-46L79 62l25 23" stroke="#69E7BE" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="27" cy="40" r="5" fill="#69E7BE" />
+      <circle cx="67" cy="84" r="5" fill="#69E7BE" />
+      <circle cx="104" cy="85" r="5" fill="#69E7BE" />
+      <path d="M66 84h12" stroke="#69E7BE" strokeWidth="3" />
+    </svg>
+  );
+}

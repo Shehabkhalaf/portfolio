@@ -351,6 +351,15 @@
 @media(prefers-reduced-motion:reduce){.contact-refresh-copy,.contact-refresh .contact-form,.contact-refresh-signal i{animation:none}.contact-refresh-direct>a:hover,.contact-refresh-back:hover,.contact-refresh .contact-form-submit button:hover{transform:none}}
 .contact-refresh a:focus-visible{outline:2px solid #a4f5d9;outline-offset:4px}
 .contact-refresh .contact-form-fields input,.contact-refresh .contact-form-fields select,.contact-refresh .contact-form-fields textarea{accent-color:#76eac0}
+
+/* Shared SK brand mark */
+.header .logo,.site-footer-logo{display:inline-flex;align-items:center;justify-content:center;line-height:1}
+.brand-mark{display:block;width:48px;height:48px;filter:drop-shadow(0 0 12px #5fdbb326);transition:transform .25s ease,filter .25s ease}
+.header .logo:hover .brand-mark,.site-footer-logo:hover .brand-mark{transform:translateY(-3px) rotate(-3deg);filter:drop-shadow(0 0 14px #69e6bd66)}
+.header nav .active:after{bottom:-45px}
+.site-footer-logo .brand-mark{width:54px;height:54px}
+@media(max-width:700px){.brand-mark{width:43px;height:43px}.site-footer-logo .brand-mark{width:50px;height:50px}}
+@media(prefers-reduced-motion:reduce){.brand-mark{transition:none}.header .logo:hover .brand-mark,.site-footer-logo:hover .brand-mark{transform:none}}
 .portrait{background:#0b1724}.portrait img{object-position:center 17%;transform:none}
 .about-new-portrait-image{background:#0b1724}.about-new-portrait-image img{transform:none;transform-origin:center}
 .about-new-portrait:hover .about-new-portrait-image img{transform:scale(1.035)}
