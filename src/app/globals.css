@@ -364,3 +364,20 @@
 .about-new-portrait-image{background:#0b1724}.about-new-portrait-image img{transform:none;transform-origin:center}
 .about-new-portrait:hover .about-new-portrait-image img{transform:scale(1.035)}
 @media(prefers-reduced-motion:reduce){.about-new-portrait:hover .about-new-portrait-image img{transform:none}}
+
+/* Mobile navigation */
+.menu-icon{display:flex;flex-direction:column;justify-content:center;gap:5px;width:23px;height:23px}
+.menu-icon span{display:block;width:100%;height:2px;border-radius:2px;background:#6be9c0;transition:transform .25s ease,opacity .2s ease}
+.menu-toggle.is-open .menu-icon span:first-child{transform:translateY(7px) rotate(45deg)}
+.menu-toggle.is-open .menu-icon span:nth-child(2){opacity:0}
+.menu-toggle.is-open .menu-icon span:last-child{transform:translateY(-7px) rotate(-45deg)}
+.menu-backdrop{display:none}
+@media(max-width:700px){
+  .header .menu-toggle{position:relative;z-index:32;display:grid;place-items:center;width:44px;height:44px;margin-left:auto;padding:0;background:#102a32cc}
+  .header .menu-backdrop{position:fixed;z-index:30;inset:0;display:block;width:100%;height:100%;border:0;background:#06101980;backdrop-filter:blur(2px);cursor:pointer;animation:menu-backdrop-in .25s ease both}
+  .header .page-nav{position:absolute;z-index:31;top:calc(100% + 8px);left:auto;right:6%;display:flex;flex-direction:column;gap:3px;width:min(260px,88vw);padding:12px;border:1px solid #4a8076;border-radius:10px;background:#102734e8;box-shadow:0 20px 45px #0008;backdrop-filter:blur(12px);opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-12px);transition:opacity .25s ease,transform .25s ease,visibility .25s}
+  .header .page-nav.is-open{display:flex;opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+  .header .page-nav a,.header .page-nav a:first-child,.header .page-nav a:nth-child(3),.header .page-nav a:nth-child(4){display:block;padding:14px 15px;font-size:14px;text-align:right}
+}
+@keyframes menu-backdrop-in{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.menu-icon span,.header .page-nav{transition:none}.header .menu-backdrop{animation:none}}

@@ -21,7 +21,8 @@ export default function SiteHeader({ active }: { active: Page }) {
   return (
     <header className="header">
       <Link className="logo" href="/" aria-label="Shehab Khalaf, home"><BrandMark /></Link>
-      <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="site-page-nav" onClick={() => setMenuOpen((open) => !open)}><span aria-hidden="true">{menuOpen ? "×" : "☰"}</span><span>Menu</span></button>
+      <button className={`menu-toggle${menuOpen ? " is-open" : ""}`} type="button" aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen} aria-controls="site-page-nav" onClick={() => setMenuOpen((open) => !open)}><span className="menu-icon" aria-hidden="true"><span /><span /><span /></span></button>
+      {menuOpen && <button className="menu-backdrop" type="button" aria-label="Close menu" onClick={() => setMenuOpen(false)} />}
       <nav id="site-page-nav" className={`page-nav${menuOpen ? " is-open" : ""}`} aria-label="Main navigation">
         {links.map(({ href, label, page }) => (
           <Link key={href} className={active === page ? "active" : undefined} href={href} aria-current={active === page ? "page" : undefined} onClick={() => setMenuOpen(false)}>{label}</Link>
