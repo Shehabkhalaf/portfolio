@@ -40,7 +40,7 @@ export default function Home() {
           <div className="service request"><b>↗</b><span><small>CLIENT REQUEST</small><strong>GET /api/v1/data</strong></span><mark>200</mark></div>
           <div className="service database"><b>▤</b><span><small>DATA LAYER</small><strong>MySQL + Redis</strong></span><i /></div>
           <div className="halo" aria-hidden="true" />
-          <div className="portrait"><Image src="/shehab-khalaf.png" alt="Shehab Khalaf" fill priority sizes="(max-width: 700px) 250px, 336px" /></div>
+          <div className="portrait"><Image src="/shehab-khalaf-portrait-2026.png" alt="Shehab Khalaf" fill priority sizes="(max-width: 700px) 250px, 336px" /></div>
           <div className="core"><i /> THE BACKEND ENGINEER</div>
           <div className="service queue"><b>≋</b><span><small>BACKGROUND JOBS</small><strong>Queue processing</strong></span><div className="bars"><i /><i /><i /></div></div>
           <div className="service auth"><b>⌘</b><span><small>ACCESS CONTROL</small><strong>Auth / RBAC</strong></span><i /></div>

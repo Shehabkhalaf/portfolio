@@ -3,7 +3,6 @@ import Link from "next/link";
 import ContactForm from "../components/ContactForm";
 import PageTransition from "../components/PageTransition";
 import SiteHeader from "../components/SiteHeader";
-import PageMotion from "../components/PageMotion";
 
 export const metadata: Metadata = {
   title: "Contact | Shehab Khalaf",
@@ -13,29 +12,25 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <PageTransition>
-    <main className="site contact-page">
-      <PageMotion />
-      <SiteHeader active="contact" />
-
-      <section className="contact-page-content" aria-labelledby="contact-page-title">
-        <div className="contact-page-copy">
-          <Link className="back-link" href="/">← BACK TO HOME</Link>
-          <p className="work-kicker">CONTACT / SHEHAB KHALAF</p>
-          <h1 id="contact-page-title">Let&apos;s build <em>what works.</em></h1>
-          <p>Need a backend developer for an API, integration, or growing product? Tell me about your idea and the challenge you&apos;re solving.</p>
-          <div className="contact-page-direct">
-            <span>OR REACH ME DIRECTLY</span>
-            <a href="mailto:shehabkhalaf7474@gmail.com"><small>EMAIL</small><strong>shehabkhalaf7474@gmail.com</strong><b>↗</b></a>
-            <a href="tel:+201148173525"><small>PHONE</small><strong>+20 114 817 3525</strong><b>↗</b></a>
+      <main className="site contact-page contact-refresh">
+        <SiteHeader active="contact" />
+        <section className="contact-refresh-content" aria-labelledby="contact-page-title">
+          <div className="contact-refresh-copy">
+            <Link className="contact-refresh-back" href="/">← BACK TO HOME</Link>
+            <p className="work-kicker">CONTACT / START A CONVERSATION</p>
+            <h1 id="contact-page-title">Let&apos;s build <em>something useful.</em></h1>
+            <p className="contact-refresh-lead">Have an API to design, a product to grow, or an integration to make reliable? Tell me what you&apos;re working on.</p>
+            <div className="contact-refresh-topics"><span>GOOD STARTING POINTS</span><div><span>Backend APIs</span><span>Integrations</span><span>Product workflows</span><span>Engineering roles</span></div></div>
+            <div className="contact-refresh-direct">
+              <span>REACH ME DIRECTLY</span>
+              <a href="mailto:shehabkhalaf7474@gmail.com"><span className="contact-direct-icon" aria-hidden="true">@</span><span><small>EMAIL</small><strong>shehabkhalaf7474@gmail.com</strong></span><b aria-hidden="true">↗</b></a>
+              <a href="tel:+201148173525"><span className="contact-direct-icon" aria-hidden="true">✆</span><span><small>PHONE</small><strong>+20 114 817 3525</strong></span><b aria-hidden="true">↗</b></a>
+            </div>
+            <div className="contact-refresh-signal" aria-hidden="true"><span><i /> CONNECTION READY</span><div><b>YOUR IDEA</b><em>→</em><b>LET&apos;S TALK</b></div><small>API / PRODUCT / COLLABORATION</small></div>
           </div>
-          <div className="contact-focus">
-            <span>GOOD TOPICS TO SEND</span>
-            <p>Laravel APIs, payment or third-party integrations, background jobs, and backend work for a growing product.</p>
-          </div>
-        </div>
-        <ContactForm />
-      </section>
-    </main>
+          <ContactForm />
+        </section>
+      </main>
     </PageTransition>
   );
 }
